@@ -1,0 +1,90 @@
+/*styles for my website folder's site*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: beige;
+}
+
+header {
+    background: tan;
+    height: 150px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+#logo {
+    width: 150px;
+    float: left;
+}
+
+
+.inner-header {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.active {
+    color: red;
+    font-weight: bold;
+}
+
+nav {
+    
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    float: left;
+    margin-left: 25px;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#wrapper {
+    width: 940px;
+    margin: 0 auto;
+    clear: both;
+}
+
+#hero {
+    background: #f00;
+    height: 300px;
+}
+main {
+    width: 580px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+aside {
+    width: 340;
+    float: right;
+    margin-bottom: 20px;
+}
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #666;
+    clear: both;
+}
+
+footer li {
+    float: left;
+    margin-right: 30px;
+    list-style-type: none;
+}
+
