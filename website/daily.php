@@ -1,5 +1,4 @@
 <?php
-include('config');
 include('includes/header.php');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
