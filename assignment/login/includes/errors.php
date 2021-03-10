@@ -1,0 +1,1 @@
+<?php // errors page our register page will be refer to the our errors page
