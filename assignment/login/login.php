@@ -1,0 +1,1 @@
+<?php // log in page will be pointing to the server.php page - username and password
