@@ -3,7 +3,11 @@
 // mysqli_real_escape_string --- O'Brien
 // mds();
 
+
+
 session_start();
+
+include('config.php');
 
 // initialize the variable
 
@@ -12,7 +16,7 @@ $LastName = '';
 $Email = '';
 $UserName = '';
 $errors = array();
-$success = '';
+$success = 'Your are now Logged in';
 
 // connect to the database!!!
 
@@ -65,6 +69,7 @@ $result = mysqli_query($db, $user_check_query) or  die(myError(__FILE__,__LINE__
 $user = mysqli_fetch_assoc($result);
     
 if($user) {
+    
 if($user['UserName'] == $UserName) {
    array_push($errors, 'Username already exists'); 
 } 
@@ -73,12 +78,59 @@ if($user['Email'] == $Email) {
    array_push($errors, 'Email already exists'); 
 }
     
+    
 } // ending my big if statement
     
 // if everything is okay and there are no errors, we need to now insert the date into the database
+   
+if(count($errors) == 0) {
+$Password = md5($Password_1); 
+
     
+$query = "INSERT INTO Users(FirstName, LastName, UserName, Email, Password) VALUES ('$FirstName', '$LastName', '$UserName', '$Email', '$Password')";
     
+mysqli_query($db,$query); 
     
+$_SESSION['UserName'] = $UserName;
+$_SESSION['success'] = $success;
+    
+header('Location:Login.php');  
+    
+} // end count
     
 }  // closing isset  
     
+if(isset($_POST['login_user'])) {
+  // receive the information 
+$UserName = mysqli_real_escape_string($db, $_POST['UserName']); 
+    
+$Password = mysqli_real_escape_string($db, $_POST['Password']);
+
+if(empty($UserName)) {
+   array_push($errors, 'User Name is required'); 
+}
+    
+if(empty($Password)) {
+   array_push($errors, 'Password is required'); 
+}
+    
+if(count($errors) == 0) {
+$Password = md5($Password);
+    
+$query = "SELECT * FROM Users WHERE UserName = '$UserName' AND Password = '$Password' ";
+    
+$results = mysqli_query($db, $query);
+    
+if(mysqli_num_rows($results) == 1) {
+    
+  $_SESSION['UserName'] = $UserName;
+  $_SESSION['success'] = $success;
+    
+ header('Location:index.php');
+} else {
+  array_push($errors, '<p class="red">Wrong username/password combo!</p>');     
+}  // else
+    
+} // close count
+    
+} //close isset
