@@ -34,8 +34,11 @@
     
 <button type="submit" class="btn" name="reg_user">Register</button>
  
-<button type="button" onclick="window.locatiion.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>'">Reset</button> 
+<button type="button" onclick="window.locatiion.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>'">Reset</button>
     
+<?php
+    include('includes/errors.php')
+    ?>
 </fieldset>
 </form>
 
