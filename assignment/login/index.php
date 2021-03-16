@@ -1,6 +1,5 @@
 <?php // index.php this is our wonderful home page, that can only be reached if you login and successfully!!!
 
-session_start();
 include('config.php');
 
 if(isset($_SESSION['UserName'])) {
@@ -14,10 +13,9 @@ if(isset($_GET['logout'])) {
    header('Location:login.php');
 }
 
-// include('includes/header.php');
-?>
+ include('includes/header.php');
+    
 
-<?php
 //Notification message
 if(isset($_SESSION['success'])) :?>
 <div class="success">
@@ -31,7 +29,7 @@ if(isset($_SESSION['success'])) :?>
 
 if(isset($_SESSION['userName'])) :?>
 <div class="welcome-logout">
- <h3>
+ <h3> Hello,
 <?php echo $_SESSION['UserName'] ; ?>    
     </h3>   
 <a href="index.php?logout='1'">Log out!</a>      
@@ -39,4 +37,9 @@ if(isset($_SESSION['userName'])) :?>
 <?php endif; ?>
     
 <h1>Welcome to Our home Page!</h1>
+<a href="login.php">login</a>
 
+</div>  <!---end wrapper-->
+
+<?php
+include('includes/footer.php');
