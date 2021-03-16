@@ -6,11 +6,11 @@
 //UserName
 //Password
 
-//include('server.php');
-//include('includes/header.php');
+include('server.php');
+include('includes/header.php');
 ?>
 
-<h1>Register Today</h1>
+<h1 class="center">Register Today</h1>
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
 <fieldset>
@@ -44,4 +44,9 @@
 
 <P class="center"><a href="login.php">Already a member?  Please login!</a></P>
 
+</div> <!--end wrapper-->
 
+<?php
+  include('includes/footer.php');
+    
+    
