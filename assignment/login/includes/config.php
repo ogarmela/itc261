@@ -5,7 +5,6 @@ ob_start(); // prevents header errors before reading the whole page!
 define('DEBUG', 'TRUE'); // we want to see our errors
 
 include('includes/credentials.php');
-include('server.php');
 
 function myError($myFile, $myLine, $errorMsg) {
 if(defined('DEBUG') && DEBUG) {
@@ -19,6 +18,4 @@ if(defined('DEBUG') && DEBUG) {
     
     
 }
-
-
 
