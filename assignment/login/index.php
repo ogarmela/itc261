@@ -1,11 +1,14 @@
 <?php // index.php this is our wonderful home page, that can only be reached if you login and successfully!!!
 
-include('config.php');
 
-if(isset($_SESSION['UserName'])) {
+session_start();
+include('includes/config.php');
+
+if(!isset($_SESSION['UserName'])) {
     $_SESSION['msg'] = 'You must login first';
     header('Location:login.php');
 }
+
 
 if(isset($_GET['logout'])) {
    session_destroy();
@@ -27,14 +30,13 @@ if(isset($_SESSION['success'])) :?>
     </div>
     <?php endif;
 
-if(isset($_SESSION['userName'])) :?>
+if(isset($_SESSION['UserName'])) :?>
 <div class="welcome-logout">
  <h3> Hello,
 <?php echo $_SESSION['UserName'] ; ?>    
     </h3>   
 <a href="index.php?logout='1'">Log out!</a>      
 </div>
-<?php endif; ?>
     
 <h1>Welcome to Our home Page!</h1>
 <a href="login.php">login</a>
