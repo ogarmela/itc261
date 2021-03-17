@@ -5,8 +5,8 @@
 
 
 
- session_start();
-//include('../config.php');
+session_start();
+include('includes/config.php');
 // initialize the variable
 
 $FirstName = '';
