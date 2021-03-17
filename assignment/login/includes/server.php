@@ -4,13 +4,9 @@
 // mds();
 
 
-if(session_status() == PHP_SESSION_NONE) {
- session_start();   
-} 
-    
 
-
-
+ session_start();
+//include('../config.php');
 // initialize the variable
 
 $FirstName = '';
@@ -128,7 +124,7 @@ if(mysqli_num_rows($results) == 1) {
   $_SESSION['UserName'] = $UserName;
   $_SESSION['success'] = $success;
     
- header("Location: http://omar12.com/it261/assigment/login/index.php", false);
+ header("Location: index.php", false);
 } else {
   array_push($errors, '<p class="red">Wrong username/password combo!</p>');     
 }  // else
