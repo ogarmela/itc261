@@ -6,7 +6,7 @@
 //UserName
 //Password
 
-include('server.php');
+include('includes/server.php');
 include('includes/header.php');
 ?>
 
