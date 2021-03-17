@@ -2,10 +2,9 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(-1);
-?>
 
-<?php // log in page will be pointing to the server.php page - username and password
 
+include('includes/server.php');
 include('includes/header.php');
 
 ?>
