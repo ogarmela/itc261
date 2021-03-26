@@ -1,0 +1,152 @@
+/*styles for my register, login and index.php pages*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background: beige; 
+}
+
+header {
+    background: tan;
+    height: 150px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.inner-header {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.active {
+    color: red;
+    font-weight: bold;
+}
+
+nav {
+    background: red;
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    float: left;
+    margin-left: 25px;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]{
+   width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#wrapper {
+    width:940px;
+    margin:0 auto;
+}
+
+main {
+    width:580px;
+    float:left;
+}
+
+aside {
+    width: 340px;
+    float: right;
+}
+
+footer {
+    clear:both; 
+}
+
+footer li {
+    float: left;
+    margin-right: 30px;
+    list-style-type: none;
+}
+.welcome-logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.success {
+   position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.center {
+    text-align:center;
+}
+
+.error {
+    color:red;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: 8px 0;
+}
+
+
+
+form {
+    max-width: 580px;
+    margin:20px auto;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+label {
+    display:block;
+    margin-bottom: 10px;
+}
+
+.err {
+    display: block;
+    color: red;
+}
+
+form ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+input, select, textarea {
+    margin-bottom: 10px;
+}
+
+img {
+        width: 70%;
+        height: 300px;
+        float: right;
+        margin-left: 60px;
+    }
+    
+
+/*
+.img {
+        width: 100%;
+        
+        
+    }
+*/
