@@ -146,7 +146,7 @@ $genderErr = 'Please check one';
 if(empty($_POST['cities'])) {
 $citiesErr = 'what, no cities!!!!!!';    
 } else {
- $wines = $_POST['cities'];   
+ $cities = $_POST['cities'];   
 } 
 
 if($_POST['region'] == 'NULL') {
